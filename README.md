@@ -67,10 +67,10 @@ Here is the list of all the hyperparameters with which you can play and see how 
 * random_seed: The number used to initialize the pseudorandom number generator
 * gamma: Discount factor for expected rewards
 * gamma_final: Final gamma discount factor
-* gammma_rate: A rate (0 to 1) for increasing gamma.
-* tau: Multiplicative factor for the soft update of target parameters
+* gammma_rate: A rate (0 to 1) for increasing gamma
+* tau: Multiplicative factor for the soft update of target weights
 * tau_final: Final value of tau
-* tau_rate: A rate (0 to 1) for decreasing tau.
+* tau_rate: A rate (0 to 1) for decreasing tau
 * update_every: The number of time steps between each updating of the neural networks
 * num_updates: The number of times to update the networks at every update_every interval
 * buffer_size: Replay buffer size
