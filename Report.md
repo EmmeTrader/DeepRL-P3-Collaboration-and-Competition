@@ -119,4 +119,46 @@ This is the Jupyter notebook where I trained the agent. These are the steps take
   - Training the two DDPG agents
   - Ploting the training scores 
 
+**workspace_utils.py**
 
+In this file, based on the course material of one exercise presented in the [Udacity Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), there is in particular one function that I used during the training of the agents in the jupyter notebook, which is the "keep_awake" function:
+this allows you to iterate through a range (like iterating through the episodes during training) while maintaining the workspace up and running.
+
+### Hyperparameters
+
+Here are the hyperparameters that I used to train the two DDPG agents in the tennis environment:
+
+```
+n_episodes: 2000
+max_t: 1000
+random_seed: 0
+gamma: 0.95
+gamma_final: 0.99
+gammma_rate: 0.02
+tau: 0.008
+tau_final: 0.001
+tau_rate: 0.002
+update_every: 15
+num_updates: 12
+buffer_size: int(1e6)
+batch_size: 512
+actor_fc1: 164
+actor_fc2: 100
+critic_fc1: 164
+critic_fc2: 100
+lr_actor: 1e-3
+lr_critic: 2e-3
+noise_theta: 0.12
+noise_sigma: 0.07
+noise_scale: 1
+```
+
+## Results
+
+Here is the evolution of the score per episodes:
+
+![Score](reward_scores_graph.png)
+
+After **661 episodes** the 100 period moving average reached a score of **0.5043**, getting above the challenge's goal of at least +0.5.
+
+The highest value of the average score has been achieved after **1923 episodes** with a score of **2.2129**, well beyond the project's requirement.
