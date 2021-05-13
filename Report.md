@@ -18,9 +18,7 @@ Unity ML-Agents is an open-source Unity plugin that enables games and simulation
 In this repository, the v0.4 interface has been used.
 
 The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. 
-Each agent receives its own, local observation. 
-
-Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
+Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
 The task is episodic, and in order to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, 
 after taking the maximum over both agents). Specifically:
@@ -61,7 +59,7 @@ Increasing gamma after each episode:      gamma(n + 1) = gamma_final + (1 - gamm
 
 Decreasing tau after each episode:     tau(n + 1) = tau_final + (1 - tau_rate) * (tau_final - tau(n))
 
-Learning stability has been way better with this two evolution of hyperparameters, allowing to get higher and higher average scores even after many episodes of training (over 1500 for example): this is why I used these two formulas in the training function ddpg() in the Jupyter notebook Tennis.ipynb.
+Learning stability has been way better with this use of dynamic parameters, allowing to get higher and higher average scores even after many episodes of training (over 1500 for example): this is why I used these two formulas in the training function ddpg() in the Jupyter notebook "Tennis.ipynb".
 
 ## Code implementation
 
@@ -108,7 +106,7 @@ The ReplayBuffer class consists of Fixed-size buffer to store experience tuples 
 The OUNoise class implements a Ornstein-Uhlenbeck process.
 This is inspired by the [DDPG paper](https://arxiv.org/abs/1509.02971), where the authors use an Ornstein-Uhlenbeck Process to add noise to the action output.
 
-The function Load_and_test allows you to run pretrained agents by loading the actor and critic weights obtained through the training process.
+The function Load_and_test allows you to run pretrained agents by loading the actor and critic weights obtained through the training process shown in the jupyter notebook.
 
 **Tennis.ipynb**
 
