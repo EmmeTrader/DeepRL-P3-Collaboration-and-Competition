@@ -26,7 +26,8 @@ In this repository, the tennis environment has been solved with a DDPG algorithm
 
 - Python 3.6 / PyTorch 0.4.0 environment creation: follow the requirements described in the [Udacity repository](https://github.com/udacity/deep-reinforcement-learning#dependencies)
 - Clone this repository and have the files accessible in the previously set up Python environment
-- For this project, you will not need to install Unity. This is because Udacity has already built the environment for you, and you can download it from one of the links below. You need to only select the environment that matches your operating system:
+
+For this project, you will not need to install Unity. This is because Udacity has already built the environment for you, and you can download it from one of the links below. You need to only select the environment that matches your operating system:
 
 - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip)
 - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis.app.zip)
